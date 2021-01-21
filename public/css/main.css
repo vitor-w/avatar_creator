@@ -89,10 +89,18 @@
 
     margin-top: 0.5rem;
 
+    background-color: white;
+
     border: 1px solid black;
     border-radius: 20px;
 
     position: relative;
+
+    box-sizing: border-box;
+
+    padding: 0;
+
+    transition: 200ms;
 }
 
 .category:after {
@@ -101,14 +109,19 @@
     padding-bottom: 100%;
 }
 
+.category:hover {
+    background-color: rgba(100, 100 ,100, 0.07);
+}
+
 .category_name {
     font-size: 1.8rem;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
 
     position: absolute;
+    top: 50%;
     left: 50%;
-    transform: translate( -50%, 0 );
+    transform: translate( -50%, -100% );
 }
 
 .category_options_box {
