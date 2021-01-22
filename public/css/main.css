@@ -147,6 +147,8 @@
     border-radius: 30px;
 
     position: relative;
+
+    transition: 200ms;
 }
 
 .category_option:after {
@@ -155,6 +157,10 @@
     padding-bottom: 100%;
 
     display: block;
+}
+
+.category_option:hover {
+    background-color: rgba(200, 0 ,110, 0.15);
 }
 
 .category_option > img {
@@ -176,10 +182,22 @@
 
     display: inline-flex;
     justify-content: center;
+
+    position: relative;
 }
 
 .avatar_view > img {
     height: 100%;
+
+    position: absolute;
+}
+
+.avatar_view > img#hair {
+    z-index: 2;
+}
+
+.avatar_view > img#eyes {
+    z-index: 1;
 }
 
 #save_button {

@@ -30,7 +30,7 @@
               <h1 class="category_name">hair</h1>
             </button>
 
-            <button name="eyes" class="category" onclick="changeCategory('eyes', 'eye', 2)" >
+            <button name="eyes" class="category" onclick="changeCategory('eyes', 'eyes', 2)" >
               <h1 class="category_name">eyes</h1>
             </button>
 
@@ -41,9 +41,9 @@
 
           <div class="category_options_box">
             
-            <div class="category_option">
+            <div class="category_option" onclick="applyOption('hair', 'hair_styles', 'hair1-2')">
 
-              <img src="./public/images/hair_styles/hair1-1.png" alt="hair-1">
+              <img src="./public/images/hair_styles/hair1-1.png" alt="hair-1" >
 
             </div>
 
@@ -70,7 +70,7 @@
 
         <div class="avatar_view">
 
-          <img src="./public/images/base_ver2.png" alt="base">
+          <img src="./public/images/base_ver2.png" alt="base" >
 
         </div>
       </div>
@@ -79,6 +79,7 @@
     </div>
 
     <script src="./public/scripts/category_changer.js" > </script>
+    <script src="./public/scripts/apply_option.js"> </script>
 
   </body>
 </html>

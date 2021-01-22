@@ -7,6 +7,7 @@ function changeCategory(folder, imgName, quantity) {
     for(var i = 1; i <= quantity; i++) {
         var option = document.createElement('div');
         option.classList.add('category_option');
+        option.setAttribute('onclick', `applyOption('${imgName}', '${folder}', '${imgName}${i}-2')`);
 
         var img = document.createElement('img');
         img.src = `./public/images/${folder}/${imgName}${i}-1.png`;
