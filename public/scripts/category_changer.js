@@ -10,7 +10,7 @@ function changeCategory(folder, imgName, quantity) {
         option.setAttribute('onclick', `applyOption('${imgName}', '${folder}', '${imgName}${i}-2')`);
 
         var img = document.createElement('img');
-        img.src = `./public/images/${folder}/${imgName}${i}-1.png`;
+        img.src = `images/${folder}/${imgName}${i}-1.png`;
         img.alt = `${imgName}${i}`;
 
         option.appendChild(img);

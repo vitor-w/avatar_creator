@@ -1,0 +1,10 @@
+{
+    "name": "avatar_creator",
+    "short_name": "avatar_creator",
+    "start_url": "public/index.html",
+    "display": "standalone",
+
+    "permissions": [
+        "downloads"
+    ]
+}

@@ -11,11 +11,17 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap"
     />
 
-    <link rel="stylesheet" href="./public/css/main.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" ></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js" ></script> 
+    <link rel="manifest" href="manifest.json" />
+
   </head>
 
   <body>
-    <div class="second_body">
+    <div class="second_body" >
       <h1 id="heading">avatar_creator</h1>
 
       <select name="art_style" id="art_style">
@@ -43,7 +49,7 @@
             
             <div class="category_option" onclick="applyOption('hair', 'hair_styles', 'hair1-2')">
 
-              <img src="./public/images/hair_styles/hair1-1.png" alt="hair-1" >
+              <img src="/images/hair_styles/hair1-1.png" alt="hair1" >
 
             </div>
 
@@ -68,18 +74,31 @@
           </div>
         </div>
 
-        <div class="avatar_view">
+        <div class="avatar_view" >
 
-          <img src="./public/images/base_ver2.png" alt="base" >
+          <img id="base" src="/images/base_ver2.png" alt="base" >
 
         </div>
       </div>
 
-      <div id="save_button">save as PNG</div>
+      <div id="html-content-holder" class="avatar_image">
+
+        <!-- <img id="hair" src="/images/hair_styles/hair1-2.png" alt="hair1" >
+
+        <img id="eyes" src="/images/eyes/eyes2-2.png" alt="eyes2" >
+
+        <img src="/images/base_ver2.png" alt="base" > -->
+
+      </div>
+
+      <a id="btn-Convert-Html2Image" class="save_button" href="#" value="Preview">Download as PNG</a>
+
+      <div id="previewImage" ></div>
     </div>
 
-    <script src="./public/scripts/category_changer.js" > </script>
-    <script src="./public/scripts/apply_option.js"> </script>
+    <script src="/scripts/category_changer.js" > </script>
+    <script src="/scripts/apply_option.js" > </script>
+    <script src="/scripts/download_img.js" ></script>
 
   </body>
 </html>

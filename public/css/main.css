@@ -1,10 +1,14 @@
+body {
+    overflow: auto;
+}
 .second_body {
     width: 46vw;
 
-    position: absolute;
+    margin: auto;
+    /* position: absolute; */
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -60%);
+    /* left: 50%; */
+    transform: translate(0, 25%);
 }
 
 #heading {
@@ -200,11 +204,12 @@
     z-index: 1;
 }
 
-#save_button {
+.save_button {
     font-size: 2rem;
     font-family: 'Roboto', sans-serif;
+    color: black;
 
-    margin: 1rem 7vw 0 0;
+    margin: 1rem 4.3vw 0 0;
     padding: 0.5rem 1.3rem;
 
     display: inline;
@@ -217,4 +222,39 @@
 
     border: 1px solid black;
     border-radius: 25px;
+
+    text-decoration: none;
+
+    transition: 200ms;  
+}
+
+.save_button:hover {
+    background-color: #a8c535;
+
+    cursor: pointer;
+}
+
+.avatar_image {
+    display: inline-flex;
+    justify-content: center;
+
+    position: relative;
+
+    z-index: -1;
+}
+
+.avatar_image > img#base {
+    position: relative;
+}
+
+.avatar_image > img {
+    position: absolute;
+}
+
+.avatar_image > img#hair {
+    z-index: 3;
+}
+
+.avatar_image > img#eyes {
+    z-index: 2;
 }
