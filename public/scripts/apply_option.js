@@ -26,9 +26,9 @@ async function postCharacteristics () {
 };
 
 
-function applyOption(id, folder, imgName) {
+function applyOption(id, path, imgName) {
 
-    var existingImg = document.querySelector(`img#${id}`)
+    var existingImg = document.querySelector(`div.avatar_view img#${id}`)
 
     if( existingImg != null ) {
         console.log('GERE');
@@ -41,18 +41,21 @@ function applyOption(id, folder, imgName) {
     }
 
     var option = document.createElement('img');
+    console.log(path);
     option.id = `${id}`;
-    option.src = `/images/${folder}/${imgName}.png`;
-    option.alt = `${imgName}`;
+    option.src = `${path}/${imgName}.png`;
+    option.alt = `${artStyle}-${imgName}`;
 
     avatar_view.appendChild(option);
 
     if( existingImg != null ) {
 
         for(option of avatar_view.childNodes) {
-            if (option.alt == existingImg.alt) {
+            if (option.src == existingImg.src) {
+                console.log('removed: ');
+                console.log(option.src);
                 avatar_view.removeChild(option);
-                console.log(existingImg.alt);
+                console.log(existingImg.src);
             }
         }
     }

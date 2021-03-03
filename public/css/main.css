@@ -1,260 +1,247 @@
 body {
-    overflow: auto;
+  overflow: hidden;
 }
 .second_body {
-    width: 46vw;
+  width: 46vw;
 
-    margin: auto;
-    /* position: absolute; */
-    top: 50%;
-    /* left: 50%; */
-    transform: translate(0, 25%);
+  margin: auto;
+  /* position: absolute; */
+  top: 50%;
+  /* left: 50%; */
+  transform: translate(0, 25%);
 }
 
 #heading {
-    font-size: 3rem;
-    font-family: 'Roboto', sans-serif;
+  font-size: 3rem;
+  font-family: "Roboto", sans-serif;
 
-    margin: 0  0 0.3rem 0;
+  margin: 0 0 0.3rem 0;
 
-    display: inline;
+  display: inline;
 }
 
 #art_style {
-    width: 9vw;
+  width: 9vw;
 
-    font-size: 1.6rem;
-    font-family: 'Reboto', sans-serif;
-    font-weight: 400;
+  font-size: 1.6rem;
+  font-family: "Reboto", sans-serif;
+  font-weight: 400;
 
-    margin-top: 0.7rem;
+  margin-top: 0.7rem;
 
-    padding: 0.4rem 0;
-    padding-left: 1.6rem;
-    padding-right: 0.9rem;
+  padding: 0.4rem 0;
+  padding-left: 1.6rem;
+  padding-right: 0.9rem;
 
-    border: 1px solid black;
-    border-radius: 30px;
+  border: 1px solid black;
+  border-radius: 30px;
 
-    appearance: none;
-    background-image: url('../images/arrow-icon.svg');
-    background-repeat: no-repeat;
-    background-origin: content-box, padding-box;
-    background-position: center right;
+  appearance: none;
+  background-image: url("../images/arrow-icon.svg");
+  background-repeat: no-repeat;
+  background-origin: content-box, padding-box;
+  background-position: center right;
 
-    float: right;
+  float: right;
 }
 
 .main_frame {
-    height: 55vh;
+  height: 55vh;
 
-    display: flex;
+  display: flex;
 
-    /* border: 3px solid black;
+  /* border: 3px solid black;
     border-radius: 30px; */
 
-    /* position: absolute;
+  /* position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -55%); */
 }
 
 .characteristics {
-    width: 46%;
-    height: 100%;
+  width: 46%;
+  height: 100%;
 
-    margin-right: 0.5rem;
+  margin-right: 0.5rem;
 
-    /* border: 3px solid black;
+  /* border: 3px solid black;
     border-radius: 30px; */
 
-    
-    display: flex;
+  display: flex;
 }
 
 .cha_categories {
-    width: 25%;
-    height: 100%; 
-    
-    
-    border: solid black;
-    border-width: 1px 0 1px 1px;
-    border-radius: 30px 0 0 30px;
+  width: 25%;
+  height: 100%;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  border: solid black;
+  border-width: 1px 0 1px 1px;
+  border-radius: 30px 0 0 30px;
 
-    overflow: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  overflow: auto;
 }
 
 .category {
-    width: 80%;
+  width: 80%;
 
-    margin-top: 0.5rem;
+  margin-top: 0.5rem;
 
-    background-color: white;
+  background-color: white;
 
-    border: 1px solid black;
-    border-radius: 20px;
+  border: 1px solid black;
+  border-radius: 20px;
 
-    position: relative;
+  position: relative;
 
-    box-sizing: border-box;
+  box-sizing: border-box;
 
-    padding: 0;
+  padding: 0;
 
-    transition: 200ms;
+  transition: 200ms;
 }
 
 .category:after {
-    content: "";
-    display: block;
-    padding-bottom: 100%;
+  content: "";
+  display: block;
+  padding-bottom: 100%;
 }
 
 .category:hover {
-    background-color: rgba(100, 100 ,100, 0.07);
+  background-color: rgba(100, 100, 100, 0.07);
 }
 
 .category_name {
-    font-size: 1.8rem;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
+  font-size: 1.8rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
 
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate( -50%, -100% );
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -100%);
 }
 
 .category_options_box {
-    width: 75%;
+  width: 75%;
 
-    padding: 0.4rem;
+  padding: 0.4rem;
 
-    border: 1px solid black;
-    border-radius: 0 30px 30px 0;
+  border: 1px solid black;
+  border-radius: 0 30px 30px 0;
 
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    grid-gap: 0.4rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-gap: 0.4rem;
 
-    box-sizing: border-box;
+  box-sizing: border-box;
 
-    overflow: auto;
+  overflow: auto;
 }
 
 .category_option {
-    border: 1px solid black;
-    border-radius: 30px;
+  border: 1px solid black;
+  border-radius: 30px;
 
-    position: relative;
+  position: relative;
 
-    transition: 200ms;
+  transition: 200ms;
 }
 
 .category_option:after {
-    content: '';
+  content: "";
 
-    padding-bottom: 100%;
+  padding-bottom: 100%;
 
-    display: block;
+  display: block;
 }
 
 .category_option:hover {
-    background-color: rgba(200, 0 ,110, 0.15);
+  background-color: rgba(200, 0, 110, 0.15);
 }
 
 .category_option > img {
-    width: 88%;
+  width: 88%;
 
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
-    position: absolute;
+  position: absolute;
 }
 
 .avatar_view {
-    width: 54%;
-    height: 100%;
+  width: 54%;
+  height: 100%;
 
-    border: 1px solid black;
-    border-radius: 30px;
+  border: 1px solid black;
+  border-radius: 30px;
 
-    display: inline-flex;
-    justify-content: center;
+  display: inline-flex;
+  justify-content: center;
 
-    position: relative;
+  position: relative;
 }
 
 .avatar_view > img {
-    height: 100%;
+  height: 100%;
 
-    position: absolute;
+  position: absolute;
 }
 
 .avatar_view > img#hair {
-    z-index: 2;
+  z-index: 2;
 }
 
 .avatar_view > img#eyes {
-    z-index: 1;
+  z-index: 1;
 }
 
 .save_button {
-    font-size: 2rem;
-    font-family: 'Roboto', sans-serif;
-    color: black;
+  font-size: 2rem;
+  font-family: "Roboto", sans-serif;
+  color: black;
 
-    margin: 1rem 4.3vw 0 0;
-    padding: 0.5rem 1.3rem;
+  margin: 1rem 4.3vw 0 0;
+  padding: 0.5rem 1.3rem;
 
-    display: inline;
+  display: inline;
 
-    float: right;
+  float: right;
 
-    text-align: center;
+  text-align: center;
 
-    background-color: #E1FF68;
+  background-color: #e1ff68;
 
-    border: 1px solid black;
-    border-radius: 25px;
+  border: 1px solid black;
+  border-radius: 25px;
 
-    text-decoration: none;
+  text-decoration: none;
 
-    transition: 200ms;  
+  transition: 200ms;
 }
 
 .save_button:hover {
-    background-color: #a8c535;
+  background-color: #a8c535;
 
-    cursor: pointer;
+  cursor: pointer;
 }
 
-.avatar_image {
-    display: inline-flex;
-    justify-content: center;
+#blank {
+  height: 100%;
+  width: 100%;
 
-    position: relative;
+  position: absolute;
 
-    z-index: -1;
-}
+  top: 0;
+  left: 0;
 
-.avatar_image > img#base {
-    position: relative;
-}
+  background-color: rgb(65, 64, 64);
 
-.avatar_image > img {
-    position: absolute;
-}
-
-.avatar_image > img#hair {
-    z-index: 3;
-}
-
-.avatar_image > img#eyes {
-    z-index: 2;
+  z-index: -1;
 }

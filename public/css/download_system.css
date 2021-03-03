@@ -1,0 +1,34 @@
+.avatar_image {
+  overflow: hidden;
+
+  display: inline-flex;
+  justify-content: center;
+
+  position: relative;
+  /* left: 50%;
+    transform: translate( -50%, 0 ); */
+}
+
+.avatar_image > img#base {
+  position: relative;
+
+  z-index: -1;
+}
+
+.avatar_image > img {
+  position: absolute;
+}
+
+.avatar_image > img#hair {
+  z-index: -3;
+}
+
+.avatar_image > img#eyes {
+  z-index: -2;
+}
+
+#previewImage {
+  position: relative;
+
+  z-index: -2;
+}

@@ -5,73 +5,20 @@ $(document).ready(function() {
 
     var body = document.body;
 
-    // $("#btn-Preview-Image").on('click', function() {
-    //     html2canvas(element, {
-    //         onrendered: function(canvas) {
-    //             $("#previewImage").append(canvas);
-    //             getCanvas = canvas;
-    //         }
-    //     });
-    // });
-
-    // function download_img () {
-
-    //     html2canvas(element, {
-    //         onrendered: function(canvas) {
-    //             $("#previewImage").append(canvas);
-    //             getCanvas = canvas;
-    //             console.log('before ' + getCanvas);
-    //         }
-    //     });
-
-    //     // Now browser starts downloading
-    //     // it intead of just showing it
-
-    //     console.log('after ' + getCanvas);
-
-    //     var imageData = getCanvas.toDataURL("image/png");
-
-    //     var newData = imageData.replace(
-    //     /^data:image\/png/, "data:application/octet-stream");
-
-    //     $("#btn-Convert-Html2Image").attr(
-    //     "download", "avatar.png").attr(
-    //     "href", newData);
-
-    //     html2canvas(element, {
-    //         onrendered: function(canvas) {
-    //             $("#previewImage").append(canvas);
-    //             getCanvas = canvas;
-    //             console.log('test');
-    //         }
-    //     });
-
-    //     // Now browser starts downloading
-    //     // it intead of just showing it
-
-    //     var imageData = getCanvas.toDataURL("image/png");
-
-    //     var newData = imageData.replace(
-    //     /^data:image\/png/, "data:application/octet-stream");
-
-    //     $("#btn-Convert-Html2Image").attr(
-    //     "download", "avatar.png").attr(
-    //     "href", newData);
-
-    //     console.log(1);
-    // };
-
     $("#btn-Convert-Html2Image").on('click', function() {
+
+        loader(1);
   
         let avatar_content = document.querySelector("div.avatar_view"); 
 
         let avatar_image = document.querySelector('div#html-content-holder');
         avatar_image.setAttribute('class', 'avatar_image');
 
+        avatar_image.innerHTML = null;
+
         avatar_content.childNodes.forEach(element => {
             // console.log(element);
             node = element.cloneNode( true );
-            console.log(node);
             avatar_image.appendChild(node);
         });
         // avatar_image.appendChild(avatar_content.childNodes[1]);
@@ -87,10 +34,7 @@ $(document).ready(function() {
             }
         });
 
-            // Now browser starts downloading
-            // it intead of just showing it
-
-            console.log(getCanvas);
+        console.log(getCanvas);
 
         setTimeout(() => {
             var imgageData =  
@@ -115,9 +59,10 @@ $(document).ready(function() {
                         link.setAttribute('download', 'avatar.png');
                         document.body.appendChild(link);
                         link.click();
+                        loader(0);
+                        console.log('response');
                 });
             }
-
 
             download();
 
@@ -125,7 +70,3 @@ $(document).ready(function() {
         }, 3000);
     });
 });
-
-            // $("#btn-Convert-Html2Image").attr(
-            // "download", "avatar.png").attr(
-            // "href", newData);
