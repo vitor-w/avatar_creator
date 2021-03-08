@@ -1,8 +1,7 @@
-var avatar_view = document.querySelector('div.avatar_view');
-
-var test = [1, 2, 3, 4];
-
 async function postCharacteristics () {
+
+    const avatar_view = document.querySelector('section.avatar_view');
+
     const avatar = [];
 
     for(characteristic of avatar_view.childNodes) {
@@ -28,37 +27,26 @@ async function postCharacteristics () {
 
 function applyOption(id, path, imgName) {
 
-    var existingImg = document.querySelector(`div.avatar_view img#${id}`)
+    const avatar_view = document.querySelector('section.avatar_view');
 
-    if( existingImg != null ) {
-        console.log('GERE');
-        avatar_view.removeChild(existingImg); 
-    }
+    const existingImg = document.querySelector(`section.avatar_view img#${id}`)
 
-    console.log(avatar_view.childNodes);
-    for( item of avatar_view.childNodes) {
-        console.log(item.alt);
+    if(existingImg) {
+
+        avatar_view.removeChild(existingImg);
+
+        if(`${URL}/${path}/${imgName}.png` == existingImg.src) {
+            return;
+        }
     }
 
     var option = document.createElement('img');
-    console.log(path);
+    
     option.id = `${id}`;
     option.src = `${path}/${imgName}.png`;
     option.alt = `${artStyle}-${imgName}`;
 
     avatar_view.appendChild(option);
-
-    if( existingImg != null ) {
-
-        for(option of avatar_view.childNodes) {
-            if (option.src == existingImg.src) {
-                console.log('removed: ');
-                console.log(option.src);
-                avatar_view.removeChild(option);
-                console.log(existingImg.src);
-            }
-        }
-    }
 
     postCharacteristics();
 }

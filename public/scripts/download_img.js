@@ -1,15 +1,15 @@
 $(document).ready(function() {
-    // Gloval variable
+    // Global variable
     var element = $("#html-content-holder");
     var getCanvas;
 
-    var body = document.body;
+    const body = document.body;
 
     $("#btn-Convert-Html2Image").on('click', function() {
 
-        loader(1);
+        loader(true);
   
-        let avatar_content = document.querySelector("div.avatar_view"); 
+        let avatar_content = document.querySelector("section.avatar_view"); 
 
         let avatar_image = document.querySelector('div#html-content-holder');
         avatar_image.setAttribute('class', 'avatar_image');
@@ -37,12 +37,12 @@ $(document).ready(function() {
         console.log(getCanvas);
 
         setTimeout(() => {
-            var imgageData =  
+            var imageData =  
             getCanvas.toDataURL("image/png"); 
             
             // Now browser starts downloading  
             // it instead of just showing it 
-            var newData = imgageData.replace( 
+            var newData = imageData.replace( 
             /^data:image\/png/, "data:application/octet-stream"); 
 
             function download() {
@@ -59,7 +59,7 @@ $(document).ready(function() {
                         link.setAttribute('download', 'avatar.png');
                         document.body.appendChild(link);
                         link.click();
-                        loader(0);
+                        loader(false);
                         console.log('response');
                 });
             }

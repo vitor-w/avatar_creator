@@ -4,7 +4,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>avatar_creator</title>
+  <title>avatar creator</title>
+  <meta name="description" content="Create your own avatar with two art styles" />
+  <meta name="keywords"
+    content="avatar, create, creator, art, two art styles, style, customize, customizable, draw, illustration, avatar maker, portrait illustration maker, free avatars online" />
+
+
 
   <link rel="preconnect" href="https://fonts.gstatic.com" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" />
@@ -29,7 +34,8 @@
       folder: "hair_styles",
       imgName: "hair",
       quantity: 1
-    }
+    };
+    const URL = "http://localhost:3000";
   </script>
 
   <div class="background">
@@ -39,16 +45,18 @@
         </div> -->
   </div>
 
-  <div class="second_body">
-    <h1 id="heading">avatar_creator</h1>
+  <main>
+    <header>
+      <h1 id="heading">avatar_creator</h1>
 
-    <select name="art_style" id="art_style">
-      <option value="style-1">style-1</option>
-      <option value="style-2" onclick="changeArtStyle()">style-2</option>
-    </select>
+      <select name="art_style" id="art_style">
+        <option value="style-1">style-1</option>
+        <option value="style-2" onclick="changeArtStyle()">style-2</option>
+      </select>
+    </header>
 
-    <div class="main_frame">
-      <div class="characteristics">
+    <article class="main_frame">
+      <section class="characteristics">
         <div class="cha_categories">
           <button name="hair_styles" class="category" onclick="changeCategory('hair_styles', 'hair', 1)">
             <h1 class="category_name">hair</h1>
@@ -67,43 +75,27 @@
 
           <div class="category_option" onclick="applyOption('hair', 'images/style-1/hair_styles', 'hair1-2')">
 
-            <img src="/images/style-1/hair_styles/hair1-1.png" alt="hair1">
+            <img src="/images/style-1/hair_styles/hair1-1.png" alt="hair 1">
 
           </div>
 
-          <!-- <div class="category_option"></div>
-
-            <div class="category_option"></div>
-
-            <div class="category_option"></div>
-
-            <div class="category_option"></div>
-
-            <div class="category_option"></div>
-
-            <div class="category_option"></div>
-
-            <div class="category_option"></div>
-
-            <div class="category_option"></div>
-            
-            <div class="category_option"></div> -->
-
         </div>
-      </div>
+      </section>
 
-      <div class="avatar_view">
+      <section class="avatar_view">
 
         <img id="base" src="/images/style-1/base_ver2.png" alt="base">
 
-      </div>
-    </div>
+      </section>
+    </article>
 
-    <a id="btn-Convert-Html2Image" class="save_button" href="#" value="Preview">Download as PNG</a>
+    <footer>
+      <a id="btn-Convert-Html2Image" class="save_button" href="#" value="Preview">Download as PNG</a>
+    </footer>
 
-  </div>
+  </main>
 
-  <div id="blank"></div>
+  <div id="blanket"></div>
 
   <div id="html-content-holder" class="avatar_image">
   </div>
@@ -111,7 +103,6 @@
   <div id="previewImage"></div>
 
   <script src="/scripts/loader.js"> </script>
-  <script src="/scripts/loading_bar.js"> </script>
   <script src="/scripts/category_changer.js"> </script>
   <script src="/scripts/changeArtStyle.js"></script>
   <script src="/scripts/apply_option.js"> </script>

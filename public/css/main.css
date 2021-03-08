@@ -1,7 +1,7 @@
 body {
   overflow: hidden;
 }
-.second_body {
+main {
   width: 46vw;
 
   margin: auto;
@@ -120,10 +120,12 @@ body {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
 
+  margin: 0;
+
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -100%);
+  transform: translate(-50%, -50%);
 }
 
 .category_options_box {
@@ -232,7 +234,7 @@ body {
   cursor: pointer;
 }
 
-#blank {
+#blanket {
   height: 100%;
   width: 100%;
 
@@ -241,7 +243,7 @@ body {
   top: 0;
   left: 0;
 
-  background-color: rgb(65, 64, 64);
+  background-color: #ffff;
 
   z-index: -1;
 }
